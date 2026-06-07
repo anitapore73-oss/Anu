@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///C:/Users/Lenovo/Desktop/htm/a.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="calculator">
+        
+     <h1> ☘︎ Calculator ☘︎</h1>
+     <input type="text" id="display">
+     <hr>
+     <div class="button-container">
+     <button class="class-button" onclick="
+     currentdisplay = &#39;&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">c</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;1&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">1</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;2&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">2</button>
+     
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;3&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">3</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;4&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">4</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;5&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">5</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;6&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">6</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;7&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">7</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;8&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">8</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;9&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">9</button>
+     <button class="class-button" onclick=" result=eval(currentdisplay);
+     currentdisplay = result;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">=</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;/&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">/</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;*&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">*</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;-&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">-</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;+&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">+</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;.&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">.</button>
+     <button class="class-button" onclick="
+     currentdisplay = currentdisplay + &#39;0&#39;;
+     document.querySelector(&#39;#display&#39;).value = currentdisplay;
+     ">0</button>
+     
+     </div>
+    </div>
+
+
+    <style>
+        h1{
+            
+            display: flex;
+            justify-content:center;
+            flex-wrap: wrap;
+            color:white;
+        }
+        .class-button{
+            
+            width: 50px;
+            height: 50px;
+            border-radius: 2px;
+            margin: 15px;
+            font-size: 20px;
+            box-shadow: 10px 10px 10px rgba(18, 17, 17, 0.7);
+            border-radius: 15px;
+
+
+        }
+        #calculator{
+            width: 350px;
+            height: 600px;
+            border: 1px solid rgb(13, 10, 10);
+            border-radius 20px;
+            background-color: rgba(93, 201, 215, 0.7);
+            
+        }
+        #display{
+            width: 300px;
+            height: 40px;
+            border: 2px solid rgb(30, 26, 26);
+            border-radius 40px;
+            margin: 25px;
+            font-size: 20px
+            
+        }
+        .button-container{
+            display: flex;
+            justify-content:center;
+            flex-wrap: wrap;
+        }
+    </style>
+
+    <script>
+
+        let currentdisplay='';
+        document.querySelector('#display').value=currentdisplay;
+    </script>
+
+
+</body></html>
