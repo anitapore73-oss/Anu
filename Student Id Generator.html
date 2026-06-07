@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)file:///C:/Users/Lenovo/Desktop/HTML/am.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Student ID Generator</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#060d1e,#1e40af);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:30px;
+}
+
+/* Form Card */
+
+.form-card{
+    width:400px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.form-card h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#1e40af;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+/* ID Card */
+
+#idCard{
+    width:330px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:30px;
+    display:none;
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+
+.top{
+    background:linear-gradient(135deg,#7897cf,#122fcf);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.top h2{
+    margin-bottom:20px;
+}
+
+.photo-box{
+    text-align:center;
+    margin-top:20px;
+}
+
+.photo-box img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    background:#ddd;
+}
+
+.details{
+    padding:20px;
+}
+
+.details h2{
+    text-align:center;
+    color:#1e40af;
+    margin-bottom:15px;
+}
+
+.details p{
+    margin:8px 0;
+}
+
+.id-number{
+    background:#1e40af;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="form-card">
+
+    <h1>Student ID Generator</h1>
+
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <input type="text" id="college" placeholder="Enter College Name">
+
+    <input type="text" id="roll" placeholder="Enter Roll Number">
+
+    <input type="text" id="phone" placeholder="Enter Phone Number">
+
+    <input type="text" id="dob" placeholder="Date of Birth (DD/MM/YYYY)">
+
+    <input type="file" id="photo">
+
+    <button onclick="generateID()">
+        Generate ID Card
+    </button>
+
+</div>
+
+<div id="idCard">
+
+    <div class="top">
+        <h2 id="displayCollege"></h2>
+        <p>STUDENT ID CARD</p>
+    </div>
+
+    <div class="photo-box">
+        <img id="studentPhoto">
+    </div>
+
+    <div class="details">
+
+        <h2 id="displayName"></h2>
+
+        <p><b>Roll No :</b>
+        <span id="displayRoll"></span></p>
+
+        <p><b>Phone :</b>
+        <span id="displayPhone"></span></p>
+
+        <p><b>Date of Birth :</b>
+        <span id="displayDob"></span></p>
+
+    </div>
+
+    
+
+</div>
+
+<script>
+
+function generateID(){
+
+    document.getElementById("displayName").innerHTML =
+    document.getElementById("name").value;
+
+    document.getElementById("displayCollege").innerHTML =
+    document.getElementById("college").value;
+
+    document.getElementById("displayRoll").innerHTML =
+    document.getElementById("roll").value;
+
+    document.getElementById("displayPhone").innerHTML =
+    document.getElementById("phone").value;
+
+    document.getElementById("displayDob").innerHTML =
+    document.getElementById("dob").value;
+
+    
+    var file =
+    document.getElementById("photo").files[0];
+
+    if(file){
+
+        var reader = new FileReader();
+
+        reader.onload = function(e){
+
+            document.getElementById("studentPhoto").src =
+            e.target.result;
+
+        }
+
+        reader.readAsDataURL(file);
+    }
+
+    document.getElementById("idCard").style.display =
+    "block";
+}
+
+</script>
+
+
+</body></html>
